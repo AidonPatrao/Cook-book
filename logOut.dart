@@ -11,6 +11,7 @@ class logOut extends StatefulWidget {
 class _logOutState extends State<logOut> {
 
   final Uri githubLink= Uri.parse('https://github.com/AidonPatrao');
+  final Uri linkedin= Uri.parse('https://tinyurl.com/Aidon-Patrao');
 
 
   @override
@@ -27,16 +28,30 @@ class _logOutState extends State<logOut> {
 
 
 
-        Drawer(elevation: 20, width: 300,backgroundColor: Color.fromRGBO(255,255,255,0.2), shape:RoundedRectangleBorder(borderRadius:BorderRadius.only(topRight: Radius.circular(30),
+        Drawer(elevation: 20, width: 300,backgroundColor: Color.fromRGBO(255,255,255,0), shape:RoundedRectangleBorder(borderRadius:BorderRadius.only(topRight: Radius.circular(30),
           bottomRight: Radius.circular(30)),
       ), child:ListView(children: [
-        Center(child: SizedBox(width: 250,height: 60,child: Text('Dev-Links🐙🐙:',style: TextStyle(fontSize: 30),),
+        Center(child: SizedBox(width: 250,height: 60,child: Text('Dev-Links🐙🐙:',style: TextStyle(fontSize: 30,color: Colors.white),),
         ),
         ),SizedBox(height: 10,),
         Link(uri: githubLink,
             builder: (context, followLink) =>  TextButton(onPressed: followLink,
-                child: SizedBox(height:60,width:250,child: Center(child: Text('My Github',style: TextStyle(fontSize: 40),))))),
-        SizedBox(height: 500,),
+                child: SizedBox(height:60,width:250,child: Center(child: Text('°Click for github',style: TextStyle(fontSize: 30,color: Colors.lightGreenAccent),
+                      ),
+                   ),
+                ),
+            ),
+          ),
+          SizedBox(height: 20),
+          Link(uri: linkedin,
+            builder: (context, followLink) =>  TextButton(onPressed: followLink,
+              child: SizedBox(height:60,width:250,child: Center(child: Text('°Click for Linkedin',style: TextStyle(fontSize: 30,color: Colors.lightGreenAccent),
+              ),
+              ),
+              ),
+            ),
+          ),
+          SizedBox(height: 400),
         ListTile(title: Text('Log-Out?'),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),tileColor: Colors.amber,
           onTap: () {
             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => loggingIn()));
