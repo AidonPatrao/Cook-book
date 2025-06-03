@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/link.dart';
 
 class PastaScreen extends StatefulWidget {
 
@@ -11,23 +12,34 @@ class PastaScreen extends StatefulWidget {
 }
 
 class _PastaScreenState extends State<PastaScreen> {
- late final screenHeight;
- late final screenWidth;
 
+  final Uri ravioli = Uri.parse('https://www.instagram.com/p/DC_qcz8OTYF/?igsh=MXBoa3I3dTcweWdnNg==');
+  final Uri penne = Uri.parse('https://pin.it/4zw9AUUfd');
 
+  final Uri bolognese =Uri.parse('https://www.instagram.com/p/DC_qcz8OTYF/?igsh=MXBoa3I3dTcweWdnNg==');
   @override
   Widget build(BuildContext context) {
 
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
 
+    final width = screenWidth*0.75;//using one variable to assign the same width to all the images(like a switch)
+    final height = screenHeight*0.680;//using one variable to assign the same height to all the images(like a switch)
+
+    final cover= BoxFit.cover;//switch method
+ final CircBorderRadius =BorderRadius.circular(60);//switch method
+
     return Scaffold(backgroundColor: Color.fromARGB(77, 168, 129, 11), body: SingleChildScrollView(
         child: Column(
-          children: [Center(child: Image.asset('images/ravioli.jpg',width:screenWidth*2,height: screenHeight*0.4,  fit: BoxFit.fitWidth)),
-            SizedBox(height:20),
+          children: [SizedBox(height: 20,),
+            Link(uri: ravioli, builder: (context, followLink) => GestureDetector(onTap:followLink,
+             child: ClipRRect( borderRadius:CircBorderRadius ,
+                   child: Image.asset('images/ravioli.jpg',width:width,height: height,  fit: cover),
+                  ),
+               ),
+            ),
              Text('Ravioli',style:GoogleFonts.archivo(fontSize: 30),
              ),
-            SizedBox(height: 10),
             Text('Tender pasta pockets filled with flavorful delights, from creamy cheeses to savory meats and vibrant vegetables.'
                 ' A versatile Italian favorite, perfect with your favorite sauce.', style: GoogleFonts.dancingScript(fontSize: 25) ,
             ),
@@ -35,8 +47,16 @@ class _PastaScreenState extends State<PastaScreen> {
                 const Divider(thickness: 20,color: Color.fromARGB(
                     107, 136, 69, 11),
                 ),
-            Image.asset('images/penne.jpg',width: screenWidth*2, height:screenHeight*0.4, fit: BoxFit.fitWidth ),
-            SizedBox(height: 20),
+            SizedBox(height: 20,),
+
+            Link(uri: penne, builder: (context, followLink) => GestureDetector(onTap: followLink,
+            child:ClipRRect( borderRadius: CircBorderRadius ,
+                  child: Image.asset('images/penne.jpg',width: width, height:height, fit: cover  ,
+                    ),
+                  ),
+                ),
+            ),
+
             Text('Pasta penne',style:GoogleFonts.archivo(fontSize: 30),
             ),
             SizedBox(height: 10),
@@ -47,7 +67,16 @@ class _PastaScreenState extends State<PastaScreen> {
             SizedBox(height: 10),
             const Divider(thickness: 20,color: Color.fromARGB(124, 136, 69, 11),
             ),
-            Image.asset('images/bolognese.jpg',width: screenWidth*2, height:screenHeight*0.4, fit: BoxFit.fitWidth ),
+
+            SizedBox(height: 20),
+            Link(uri: bolognese, builder: (context, followLink) => GestureDetector(onTap: followLink,
+            child:ClipRRect( borderRadius: CircBorderRadius ,
+                  child: Image.asset('images/bolognese.jpg',width: width, height:height, fit: cover  ,
+                    ),
+                  ),
+                ),
+            ),
+
             SizedBox(height: 20),
             Text('Spaghetti bolognese',style:GoogleFonts.archivo(fontSize: 30),
             ),
