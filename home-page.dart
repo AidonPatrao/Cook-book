@@ -28,9 +28,9 @@ class _MyHomePage extends State<MyHomepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(drawer: navMenu,appBar: AppBar(backgroundColor: Color.fromARGB(
-        219, 136, 69, 11), title: Text('Cookbook'
-      , style: TextStyle(fontWeight: FontWeight.w900, color: Color.fromARGB(
-          255, 73, 14, 9)),), centerTitle: true),
+        255, 71, 75, 80), title: Text('Cθθk  bθθk',
+       style: TextStyle(fontWeight: FontWeight.w900, color: Color.fromARGB(
+          255, 188, 171, 24),),), centerTitle: true),
 
       body: Screens[myIndex],
 
@@ -52,25 +52,23 @@ class _MyHomePage extends State<MyHomepage> {
           });
         },
         currentIndex: myIndex,
-        selectedItemColor: Color.fromARGB(224, 113, 12, 4),
+        selectedItemColor: Color.fromARGB(255, 188, 171, 24),
         unselectedItemColor: Color.fromARGB(255, 201, 213, 225),
-        backgroundColor: Color.fromARGB(
-            203, 136, 69, 11),
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home_sharp), label: 'Home',
-            backgroundColor: Color.fromARGB(210, 6, 80, 29),
+            backgroundColor: Color.fromARGB(215, 1, 6, 11),
           ),
           BottomNavigationBarItem(icon: Icon(Icons.local_pizza), label: 'pizza',
-            backgroundColor: Color.fromARGB(255, 5, 108, 108),
+            backgroundColor: Color.fromARGB(255, 12, 50, 80),
           ),
           BottomNavigationBarItem(
             icon: Image.asset('images/pasta.png', width: 50,),
             label: 'pasta',
             backgroundColor: Color.fromARGB(
-                216, 136, 69, 11),
+                255, 71, 75, 80),
           ),
           BottomNavigationBarItem(icon: Icon(Icons.cake_rounded), label: 'cake',
-            backgroundColor: Color.fromARGB(255, 181, 140, 17),
+            backgroundColor: Color.fromARGB(255, 3, 40, 67),
           ),
         ],
         iconSize: 50,
