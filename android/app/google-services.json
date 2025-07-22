@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "202004443752",
+    "project_id": "cook-book-cc8ae",
+    "storage_bucket": "cook-book-cc8ae.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202004443752:android:b471973a0555592bc781dd",
+        "android_client_info": {
+          "package_name": "com.example.forzagithub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_Sc-5gFFTMEDJZExO9jz22Kn1SG3bvUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
