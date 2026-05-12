@@ -35,7 +35,7 @@ class _CakeScreenState extends State<CakeScreen> {
           Center(child:
           Link(uri: cookies, builder: (context, followLink) => GestureDetector(onTap: followLink,
           child:ClipRRect(borderRadius: CircBorderRadius,
-            child: Image.asset('images/cookies.jpg',width:width,height:height,  fit:cover),
+            child: Image.asset('assets/images/cookies.jpg',width:width,height:height,  fit:cover),
                   ),
                 ),
               ),
@@ -57,7 +57,7 @@ class _CakeScreenState extends State<CakeScreen> {
 
           Link(uri: carrot, builder: (context, followLink) => GestureDetector(onTap: followLink,
           child:ClipRRect(borderRadius: CircBorderRadius,
-             child: Image.asset('images/carrot.jpg',width:width, height:height, fit: cover),
+             child: Image.asset('assets/images/carrot.jpg',width:width, height:height, fit: cover),
                   ),
                 ),
           ),
@@ -79,7 +79,7 @@ class _CakeScreenState extends State<CakeScreen> {
 
           Link(uri: velvet, builder: (context, followLink) => GestureDetector(onTap: followLink,
           child: ClipRRect(borderRadius: CircBorderRadius,
-          child: Image.asset('images/velvet.jpg',width: width, height:height, fit:cover
+          child: Image.asset('assets/images/velvet.jpg',width: width, height:height, fit:cover
                   ),
                 ),
               ),

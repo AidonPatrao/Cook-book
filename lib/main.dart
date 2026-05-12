@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:forzagithub/authentication/login.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:forzagithub/home-page.dart';
 
 
 
@@ -91,7 +92,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
 
     return MaterialApp(
-      home:loggingIn(),
+      home:MyHomepage(),
 
     );
   }}

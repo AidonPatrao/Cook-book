@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:forzagithub/home-screen.dart';
+import 'logOut.dart';
 import 'pizza-screen.dart';
 import 'pasta-screen.dart';
 import 'cake-screen.dart';
-import 'authentication/logOut.dart';
+
 
 class MyHomepage extends StatefulWidget {
   @override
@@ -62,7 +63,7 @@ class _MyHomePage extends State<MyHomepage> {
             backgroundColor: Color.fromARGB(255, 12, 50, 80),
           ),
           BottomNavigationBarItem(
-            icon: Image.asset('images/pasta.png', width: 50,),
+            icon: Image.asset('assets/images/pasta.png', width: 50,),
             label: 'pasta',
             backgroundColor: Color.fromARGB(
                 255, 71, 75, 80),

@@ -6,8 +6,8 @@ class HomeScreen extends StatelessWidget {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
 
-    return Stack(children:[Image.asset('images/cook-book.jpg',height:double.maxFinite, width: double.maxFinite, fit: BoxFit.cover),
-      Center(child: Image.asset('images/welcome.png',height: screenHeight*0.6,width: screenWidth,)),
+    return Stack(children:[Image.asset('assets/images/cook-book.jpg',height:double.maxFinite, width: double.maxFinite, fit: BoxFit.cover),
+      Center(child: Image.asset('assets/images/welcome.png',height: screenHeight*0.6,width: screenWidth,)),
       ],
         
 

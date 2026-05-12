@@ -36,7 +36,7 @@ class _PizzaScreenState extends State<PizzaScreen> {
         children: [SizedBox(height: 20),
           Center(child: Link(uri: margherita, builder: (context, followLink) => GestureDetector(onTap: followLink,
           child: ClipRRect( borderRadius:CircBorderRadius ,
-            child: Image.asset('images/margherita.jpg',width:width,height: height,  fit: cover,)
+            child: Image.asset('assets/images/margherita.jpg',width:width,height: height,  fit: cover,)
                     ,)
                   ,)
                 ,)
@@ -56,7 +56,7 @@ class _PizzaScreenState extends State<PizzaScreen> {
           SizedBox(height: 20),
           Link(uri: pepperoni, builder: (context, followLink) => GestureDetector(onTap: followLink,
             child: ClipRRect( borderRadius:CircBorderRadius ,
-              child: Image.asset('images/pepper.jpg',width:width,height: height,  fit: cover,)
+              child: Image.asset('assets/images/pepper.jpg',width:width,height: height,  fit: cover,)
               ,)
             ,)
             ,),
@@ -75,7 +75,7 @@ class _PizzaScreenState extends State<PizzaScreen> {
 
           Link(uri: hawaiian, builder: (context, followLink) => GestureDetector(onTap: followLink,
             child: ClipRRect( borderRadius:CircBorderRadius ,
-              child: Image.asset('images/hawaiian.jpg',width:width,height: height,  fit: cover,)
+              child: Image.asset('assets/images/hawaiian.jpg',width:width,height: height,  fit: cover,)
               ,)
             ,)
             ,),

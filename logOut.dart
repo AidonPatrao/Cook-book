@@ -22,7 +22,7 @@ class _logOutState extends State<logOut> {
 
     return Stack(
       children:[ SizedBox(height: deviceHeight,
-      width: deviceWidth*0.6, child: Positioned(child: Image.asset('images/logOut-page.png',fit: BoxFit.cover,)),
+      width: deviceWidth*0.6, child: Positioned(child: Image.asset('assets/images/logOut-page.png',fit: BoxFit.cover,)),
       ),
 
 
